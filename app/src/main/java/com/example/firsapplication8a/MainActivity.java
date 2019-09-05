@@ -1,4 +1,4 @@
-package com.example.firstapplication8a;
+package com.example.firsapplication8a;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, "La aplicación se está creando", Toast.LENGTH_LONG).show(); //Contexto, mensaje, tiempo
+
+        int U1=10;
+        int U2=20;
+        if(U1==U2){
+            Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
