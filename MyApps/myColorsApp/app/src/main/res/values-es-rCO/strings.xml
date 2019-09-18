@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi App de Colores</string>
+    <string name="yellow">Amarillo</string>
+    <string name="blue">Azul</string>
+    <string name="apricot">Albaricoque</string>
+    <string name="black">Negro</string>
+    <string name="brown">Café</string>
+    <string name="cyan">Cian</string>
+    <string name="gray">Gris</string>
+    <string name="green">Verde</string>
+    <string name="light_green">Verde claro</string>
+    <string name="light_yellow">Amarillo claro</string>
+    <string name="magenta">Magenta</string>
+    <string name="orange">Naranja</string>
+    <string name="pink">Rosado</string>
+    <string name="purple">Morado</string>
+    <string name="red">Rojo</string>
+    <string name="white">Blanco</string>
+    <string name="alpha">Alfa</string>
+    <string name="transparent">Transparente</string>
+    <string name="semitransparent">Semitransparente</string>
+    <string name="opaque">Opaco</string>
+    <string name="about_of">Acerca de</string>
+</resources>

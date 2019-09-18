@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/iteTransparent"
+        android:title="@string/transparent"
+        />
+
+    <item
+        android:id="@+id/iteSemitransparent"
+        android:title="@string/semitransparent"
+        />
+
+    <item
+        android:id="@+id/iteOpaque"
+        android:title="@string/opaque"
+        />
+
+    <item
+        android:id="@+id/iteYellow"
+        android:title="@string/yellow"
+        />
+
+    <item
+        android:id="@+id/iteBlue"
+        android:title="@string/blue"
+        />
+
+    <item
+        android:id="@+id/iteRed"
+        android:title="@string/red"
+        />
+
+    <item
+        android:id="@+id/iteGreen"
+        android:title="@string/green"
+        />
+
+    <item
+        android:id="@+id/iteOrange"
+        android:title="@string/orange"
+        />
+
+    <item
+        android:id="@+id/itePurple"
+        android:title="@string/purple"
+        />
+
+    <item
+        android:id="@+id/iteBrown"
+        android:title="@string/brown"
+        />
+
+    <item
+        android:id="@+id/iteLightYellow"
+        android:title="@string/light_yellow"
+        />
+
+    <item
+        android:id="@+id/iteCyan"
+        android:title="@string/cyan"
+        />
+
+    <item
+        android:id="@+id/itePink"
+        android:title="@string/pink"
+        />
+
+    <item
+        android:id="@+id/iteLightGreen"
+        android:title="@string/light_green"
+        />
+
+    <item
+        android:id="@+id/iteApricot"
+        android:title="@string/apricot"
+        />
+
+    <item
+        android:id="@+id/iteMagenta"
+        android:title="@string/magenta"
+        />
+
+    <item
+        android:id="@+id/iteBlack"
+        android:title="@string/black"
+        />
+
+    <item
+        android:id="@+id/iteGray"
+        android:title="@string/gray"
+        />
+
+    <item
+        android:id="@+id/iteWhite"
+        android:title="@string/white"
+        />
+
+    <item
+        android:id="@+id/iteAboutOf"
+        android:title="@string/about_of"
+        />
+
+</menu>
