@@ -22,4 +22,10 @@
     <string name="semitransparent">Semitransparente</string>
     <string name="opaque">Opaco</string>
     <string name="about_of">Acerca de</string>
+    <string name="selColorHeaderTitle">Escoge un color</string>
+    <string name="createdByTitle">Creado por:</string>
+    <string name="author">Iván Camilo Narváez Vanegas</string>
+    <string name="ageTitle">21 años</string>
+    <string name="careerTitle">Ingeniero de sistemas</string>
+    <string name="emailOfAuthor">ivannarvaez774@hotmail.com</string>
 </resources>

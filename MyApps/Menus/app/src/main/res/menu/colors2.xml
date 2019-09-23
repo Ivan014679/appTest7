@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="+@id/op_1"
+        android:id="+@id/option1"
         android:icon="@drawable/ic_ojito"
         android:title="Option 1"
         app:showAsAction="ifRoom"/>
 
     <item
-    android:id="+@id/op_2"
+    android:id="+@id/option2"
     android:title="Option 2"/>
 
     <item
-        android:id="+@id/op_3"
+        android:id="+@id/option3"
         android:title="Option 3"/>
 
     <item
-        android:id="+@id/op_3"
-        android:title="Option 3"/>
+        android:id="+@id/option4"
+        android:title="Option 4"/>
 </menu>
