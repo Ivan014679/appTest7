@@ -28,4 +28,13 @@
     <string name="ageTitle">21 años</string>
     <string name="careerTitle">Ingeniero de sistemas</string>
     <string name="emailOfAuthor">ivannarvaez774@hotmail.com</string>
+    <string name="firstname">Nombre</string>
+    <string name="firstname_placeholder">Ingrese su nombre</string>
+    <string name="lastname">Apellido</string>
+    <string name="lastname_placeholder">Ingrese su apellido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="email_placeholder">Ingrese su correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="pass_placeholder">Ingrese una contraseña</string>
+    <string name="signup">Registrarse</string>
 </resources>

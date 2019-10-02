@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SQLite</string>
+    <string name="firstname">Nombre</string>
+    <string name="firstname_placeholder">Ingrese su nombre</string>
+    <string name="lastname">Apellido</string>
+    <string name="lastname_placeholder">Ingrese su apellido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="email_placeholder">Ingrese su correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="pass_placeholder">Ingrese una contraseña</string>
+    <string name="signup">Registrarse</string>
+</resources>

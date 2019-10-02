@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SQLite</string>
+    <string name="firstname">First name</string>
+    <string name="firstname_placeholder">Write your first name</string>
+    <string name="lastname">Last name</string>
+    <string name="lastname_placeholder">Write your last name</string>
+    <string name="email">E-mail</string>
+    <string name="email_placeholder">Write your e-mail</string>
+    <string name="password">Password</string>
+    <string name="pass_placeholder">Write your password</string>
+    <string name="signup">Sign up</string>
+</resources>
