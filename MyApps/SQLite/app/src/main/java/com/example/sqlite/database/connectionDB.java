@@ -12,7 +12,7 @@ public class connectionDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase databaseDB) {
-        databaseDB.execSQL("CREATE TABLE users(id int primary key autoincrement," +
+        databaseDB.execSQL("CREATE TABLE users(id integer primary key autoincrement," +
                 " firstname text not null, lastname text not null, email text not null unique, password text not null)");
     }
 

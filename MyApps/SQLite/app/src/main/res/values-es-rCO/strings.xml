@@ -10,4 +10,8 @@
     <string name="password">Contraseña</string>
     <string name="pass_placeholder">Ingrese una contraseña</string>
     <string name="signup">Registrarse</string>
+    <string name="toastregistered">El usuario ha sido registrado</string>
+    <string name="userslist">Lista de usuarios</string>
+    <string name="signin">Iniciar sesión</string>
+    <string name="alreadyregistered">El correo electrónico ya está registrado</string>
 </resources>
