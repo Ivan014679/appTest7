@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="hint_password">Escriba su nombre de usuario</string>
+    <string name="hint_username">Escriba su contraseña</string>
+    <string name="password">Contraseña</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="hint_firstname">Escriba su nombre</string>
+    <string name="hint_lastname">Escriba su apellido</string>
+    <string name="hint_email">Escriba su correo electrónico</string>
+    <string name="firstname">Nombre</string>
+    <string name="lastname">Apellido</string>
+    <string name="email">Correo electrónico</string>
+</resources>

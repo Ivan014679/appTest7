@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pets</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="hint_username">Write your username</string>
+    <string name="hint_password">Write your password</string>
+    <string name="hint_firstname">Write your first name</string>
+    <string name="hint_lastname">Write your last name</string>
+    <string name="hint_email">Write your email</string>
+    <string name="firstname">First name</string>
+    <string name="lastname">Last name</string>
+    <string name="email">E-mail</string>
+</resources>
