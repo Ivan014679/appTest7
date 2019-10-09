@@ -14,10 +14,13 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/cat"
-            android:layout_marginBottom="32dp"/>
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/textViewU"
@@ -58,7 +61,8 @@
             android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sign_up"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:onClick="signUp"
+            android:text="@string/sign_up" />
     </LinearLayout>
 </RelativeLayout>

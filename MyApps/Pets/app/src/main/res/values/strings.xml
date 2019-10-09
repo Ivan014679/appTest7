@@ -12,4 +12,6 @@
     <string name="firstname">First name</string>
     <string name="lastname">Last name</string>
     <string name="email">E-mail</string>
+    <string name="toastregistered">The user has been registered successfully</string>
+    <string name="alreadyregistered">The user already exists</string>
 </resources>
