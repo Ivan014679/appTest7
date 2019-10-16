@@ -2,9 +2,7 @@
     <string name="app_name">Pets</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
-    <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="hint_username">Write your username</string>
     <string name="hint_password">Write your password</string>
     <string name="hint_firstname">Write your first name</string>
     <string name="hint_lastname">Write your last name</string>
@@ -14,4 +12,11 @@
     <string name="email">E-mail</string>
     <string name="toastregistered">The user has been registered successfully</string>
     <string name="alreadyregistered">The user already exists</string>
+    <string name="noemptyfields">One or more fields are empty</string>
+    <string name="cpassword">Confirm password</string>
+    <string name="hint_cpassword">Write your password again</string>
+    <string name="incorrectemail">The email isn\'t valid</string>
+    <string name="toastlogged">Successful login</string>
+    <string name="loginincorrect">The email or password is incorrect</string>
+    <string name="toastpassconfirm">The passwords aren\'t the same</string>
 </resources>

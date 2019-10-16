@@ -42,21 +42,6 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textViewUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/username" />
-
-        <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/hint_username"
-            android:inputType="textPersonName" />
-
-        <TextView
             android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,7 +54,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint_email"
-            android:inputType="textPersonName" />
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:id="@+id/textViewPassword"
@@ -78,13 +63,70 @@
             android:layout_marginTop="16dp"
             android:text="@string/password" />
 
-        <EditText
-            android:id="@+id/editTextPassword"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/imageEyePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/editTextPassword"
+                android:layout_alignRight="@+id/editTextPassword"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_eye_show"
+                android:contentDescription="SHOW"
+                android:scaleType="fitXY" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewCPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cpassword" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextCPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_cpassword"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/imageEyeCPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/editTextCPassword"
+                android:layout_alignRight="@+id/editTextCPassword"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_eye_show"
+                android:contentDescription="SHOW"
+                android:scaleType="fitXY" />
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/buttonRegister"
@@ -93,5 +135,6 @@
             android:layout_marginTop="32dp"
             android:onClick="signUp"
             android:text="@string/sign_up" />
+
     </LinearLayout>
 </RelativeLayout>

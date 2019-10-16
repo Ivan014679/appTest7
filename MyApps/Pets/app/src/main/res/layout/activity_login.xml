@@ -23,18 +23,18 @@
             android:layout_gravity="center"/>
 
         <TextView
-            android:id="@+id/textViewU"
+            android:id="@+id/textViewE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/username" />
+            android:text="@string/email" />
 
         <EditText
-            android:id="@+id/editTextU"
+            android:id="@+id/editTextE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/hint_username"/>
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_email"/>
 
         <TextView
             android:id="@+id/textViewP"
@@ -42,20 +42,42 @@
             android:layout_height="wrap_content"
             android:text="@string/password" />
 
-        <EditText
-            android:id="@+id/editTextP"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="@string/hint_password"/>
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/imageEyeP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/editTextP"
+                android:layout_alignRight="@+id/editTextP"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_eye_show"
+                android:contentDescription="SHOW"
+                android:scaleType="fitXY" />
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/btnSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in"
-            android:layout_marginTop="32dp" />
+            android:layout_marginTop="32dp"
+            android:onClick="signIn"
+            android:text="@string/sign_in" />
 
         <Button
             android:id="@+id/btnSignUp"

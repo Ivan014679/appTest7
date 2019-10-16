@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mascotas</string>
-    <string name="hint_password">Escriba su nombre de usuario</string>
-    <string name="hint_username">Escriba su contraseña</string>
+    <string name="hint_password">Escriba su contraseña</string>
     <string name="password">Contraseña</string>
     <string name="sign_up">Registrarse</string>
-    <string name="username">Nombre de usuario</string>
     <string name="sign_in">Iniciar sesión</string>
     <string name="hint_firstname">Escriba su nombre</string>
     <string name="hint_lastname">Escriba su apellido</string>
@@ -15,4 +13,11 @@
     <string name="email">Correo electrónico</string>
     <string name="toastregistered">El usuario ha sido registrado exitosamente</string>
     <string name="alreadyregistered">El usuario ya existe</string>
+    <string name="noemptyfields">Uno o más campos están vacíos</string>
+    <string name="cpassword">Confirmar contraseña</string>
+    <string name="hint_cpassword">Escriba su contraseña nuevamente</string>
+    <string name="incorrectemail">El correo electrónico no es válido</string>
+    <string name="toastlogged">Inicio de sesión exitoso</string>
+    <string name="loginincorrect">El correo electrónico o la contraseña son incorrectos</string>
+    <string name="toastpassconfirm">Las contraseñas tienen que ser iguales</string>
 </resources>

@@ -2,6 +2,7 @@ package com.example.pets.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -15,7 +16,7 @@ public class PetsDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase pets) {
         pets.execSQL("CREATE TABLE users(id integer primary key autoincrement," +
                 " firstname text not null, lastname text not null," +
-                " username text not null unique, email text not null unique, password text not null)");
+                " email text not null unique, password text not null)");
     }
 
     public boolean insert(String[] data){
@@ -26,9 +27,8 @@ public class PetsDB extends SQLiteOpenHelper {
             ContentValues reg = new ContentValues();
             reg.put("firstname", data[0]);
             reg.put("lastname", data[1]);
-            reg.put("username", data[2]);
-            reg.put("email", data[3]);
-            reg.put("password", data[4]);
+            reg.put("email", data[2]);
+            reg.put("password", data[3]);
 
             pets_db.insertOrThrow("users", null, reg);
 
@@ -40,6 +40,19 @@ public class PetsDB extends SQLiteOpenHelper {
         }
     }
 
+    public boolean login(String[] data){
+        //Let DB read-write
+        SQLiteDatabase pets_db = this.getWritableDatabase();
+
+        //Get data
+        Cursor cursor = pets_db.rawQuery("SELECT * from users where email='" + data[0] + "' and password='" + data[1] + "' limit 1", null);
+
+        if(cursor.isNull(0)){
+            return false;
+        }else{
+            return true;
+        }
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase pets, int i, int i1) {
