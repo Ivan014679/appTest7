@@ -19,4 +19,5 @@
     <string name="toastlogged">Successful login</string>
     <string name="loginincorrect">The email or password is incorrect</string>
     <string name="toastpassconfirm">The passwords aren\'t the same</string>
+    <string name="wrongpassword">The password must be longer than 4 characters and have uppercase, lowercase and numbers</string>
 </resources>
