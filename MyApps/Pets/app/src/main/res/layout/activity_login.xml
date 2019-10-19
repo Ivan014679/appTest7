@@ -45,6 +45,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint=""
+            app:hintEnabled="false"
             app:passwordToggleEnabled="true">
 
             <EditText
@@ -72,5 +74,49 @@
             android:layout_marginTop="16dp"
             android:onClick="signUp"
             android:text="@string/sign_up" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <ImageButton
+                android:id="@+id/buttonFacebook"
+                android:background="@null"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageButton
+                android:id="@+id/buttonTwitter"
+                android:background="@null"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_twitter" />
+
+            <ImageButton
+                android:id="@+id/buttonInstagram"
+                android:background="@null"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_instagram" />
+
+            <ImageButton
+                android:id="@+id/buttonGoogle"
+                android:background="@null"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_google" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

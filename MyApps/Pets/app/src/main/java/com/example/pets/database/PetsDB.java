@@ -47,7 +47,7 @@ public class PetsDB extends SQLiteOpenHelper {
         //Get data
         Cursor cursor = pets_db.rawQuery("SELECT * from users where email='" + data[0] + "' and password='" + data[1] + "' limit 1", null);
 
-        if(cursor.isNull(0)){
+        if(cursor.getCount() == 0){
             return false;
         }else{
             return true;

@@ -20,5 +20,6 @@
     <string name="toastlogged">Inicio de sesión exitoso</string>
     <string name="loginincorrect">El correo electrónico o la contraseña son incorrectos</string>
     <string name="toastpassconfirm">Las contraseñas tienen que ser iguales</string>
-    <string name="wrongpassword">La contraseña debe ser mayor a 4 caracteres y tener mayúsculas, minúsculas y números</string>
+    <string name="wrongpassword">La contraseña debe ser mayor a 5 caracteres y tener mayúsculas, minúsculas, números y símbolos</string>
+    <string name="wrongnames">El nombre y el apellido sólo deben contener letras</string>
 </resources>

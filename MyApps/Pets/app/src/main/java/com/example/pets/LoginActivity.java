@@ -4,19 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
 import android.util.Patterns;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.pets.database.PetsDB;
 
-import java.util.regex.Pattern;
-
 public class LoginActivity extends AppCompatActivity {
     private EditText email, password;
-    private String regex_email = "[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         String pass = password.getText().toString();
 
         if(!onlinemail.isEmpty() && !pass.isEmpty()) {
-            Pattern patron = Pattern.compile(regex_email);
-            if(!Patterns.EMAIL_ADDRESS.matcher(onlinemail.trim()).matches()){
+            if(Patterns.EMAIL_ADDRESS.matcher(onlinemail.trim()).matches()){
                 String[] user = {onlinemail, pass};
                 PetsDB petsDB = new PetsDB(this,
                         "pets", null, 1);
