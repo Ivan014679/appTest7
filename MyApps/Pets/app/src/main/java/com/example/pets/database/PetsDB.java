@@ -112,8 +112,7 @@ public class PetsDB extends SQLiteOpenHelper {
         reg.put("phone", user.getPhone());
         reg.put("gender", Character.toString(user.getGender()));
 
-        pets_db.insertOrThrow("users", null, reg);
-        pets_db.update("users", reg, "email=" + user.getEmail(), null);
+        pets_db.update("users", reg, "email='" + user.getEmail() + "'", null);
 
         pets_db.close();
     }
@@ -122,7 +121,7 @@ public class PetsDB extends SQLiteOpenHelper {
         //Let DB read-write
         SQLiteDatabase pets_db = this.getWritableDatabase();
 
-        pets_db.delete("users", "email=" + email, null);
+        pets_db.delete("users", "email='" + email + "'", null);
         pets_db.close();
     }
 

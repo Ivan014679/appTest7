@@ -64,16 +64,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:background="@color/colorBtnSignIn"
             android:onClick="signIn"
-            android:text="@string/sign_in" />
+            android:text="@string/sign_in"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:background="@color/colorBtnSignUp"
             android:onClick="signUp"
-            android:text="@string/sign_up" />
+            android:text="@string/sign_up"
+            android:textColor="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"

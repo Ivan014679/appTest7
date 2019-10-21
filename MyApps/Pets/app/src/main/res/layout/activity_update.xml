@@ -6,9 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".UpdateActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="32dp">
 
@@ -54,7 +58,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint_email"
-            android:inputType="none" />
+            android:inputType="textEmailAddress"
+            android:focusable="false"
+            android:enabled="false" />
 
         <TextView
             android:id="@+id/tvPassword"
@@ -91,9 +97,12 @@
             android:id="@+id/etBirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:clickable="true"
             android:ems="10"
+            android:focusable="false"
             android:hint="@string/hint_birth"
-            android:inputType="date" />
+            android:inputType="date"
+            android:onClick="onClick" />
 
         <TextView
             android:id="@+id/tvCountry"
@@ -104,8 +113,12 @@
 
         <Spinner
             android:id="@+id/sCountry"
+            style="?android:attr/spinnerItemStyle"
+            android:singleLine="true"
+            android:ellipsize="marquee"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:prompt="@string/hint_country" />
 
         <TextView
             android:id="@+id/tvPhone"
@@ -131,16 +144,23 @@
 
         <Spinner
             android:id="@+id/sGender"
+            style="?android:attr/spinnerItemStyle"
+            android:singleLine="true"
+            android:ellipsize="marquee"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:prompt="@string/hint_gender" />
 
         <Button
             android:id="@+id/buttonUpdate"
+            android:background="@color/colorBtnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:onClick="update"
-            android:text="@string/update" />
+            android:text="@string/update"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

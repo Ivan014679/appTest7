@@ -47,7 +47,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @Override
     public int getItemCount() {
-        return userList.size();
+        try {
+            return userList.size();
+        }catch(java.lang.NullPointerException ex){
+            return 0;
+        }
     }
 
     class UserViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener{
@@ -76,14 +80,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                             Intent intent = new Intent(mContext, UpdateActivity.class);
                             intent.putExtra("email", tvEmail.getText());
                             mContext.startActivity(intent);
+                            return true;
                         case R.id.iteDeleteUser: //Delete user
                             PetsDB petsDB = new PetsDB(mContext,
                                     "pets", null, 1);
                             petsDB.delete(tvEmail.getText().toString());
-                            Toast.makeText(mContext, Resources.getSystem().getString(R.string.toastdeleted), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(mContext, Resources.getSystem().getString(R.string.toastdeleted), Toast.LENGTH_SHORT).show();
                             mContext.startActivity(new Intent(mContext, MainMenuActivity.class));
-                        default:
                             return true;
+                        default:
+                            return false;
                     }
                 }
             });

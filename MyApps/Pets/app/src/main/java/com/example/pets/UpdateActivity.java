@@ -2,15 +2,18 @@ package com.example.pets;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.pets.classes.DatePickerFragment;
 import com.example.pets.classes.User;
 import com.example.pets.database.PetsDB;
 
@@ -34,6 +37,9 @@ public class UpdateActivity extends AppCompatActivity {
                         R.array.genders_array,
                         android.R.layout.simple_spinner_item);
 
+        adapterc.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterg.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         fname = findViewById(R.id.etFName);
         lname = findViewById(R.id.etLName);
         email = findViewById(R.id.etEmail);
@@ -43,7 +49,7 @@ public class UpdateActivity extends AppCompatActivity {
 
         country = findViewById(R.id.sCountry);
         country.setAdapter(adapterc);
-        gender = findViewById(R.id.sCountry);
+        gender = findViewById(R.id.sGender);
         gender.setAdapter(adapterg);
 
         Intent intent = this.getIntent();
@@ -63,8 +69,16 @@ public class UpdateActivity extends AppCompatActivity {
             country.setSelection(user.getCountry());
         }
 
-        if(user.getGender() != '?'){
-            gender.setSelection(user.getGender());
+        switch(user.getGender()){
+            case 'M':
+                gender.setSelection(1);
+                break;
+            case 'F':
+                gender.setSelection(2);
+                break;
+            default:
+                gender.setSelection(0);
+                break;
         }
     }
 
@@ -78,13 +92,12 @@ public class UpdateActivity extends AppCompatActivity {
         String phonenumber = phone.getText().toString();
         int countryid = country.getSelectedItemPosition();
         char genderid;
-        switch(gender.getSelectedItemPosition()){
-            case 0:
-                genderid = 'M';
-            case 1:
-                genderid = 'F';
-                default:
-                    genderid = '?';
+        if (gender.getSelectedItemPosition() == 1) {
+            genderid = 'M';
+        }else if(gender.getSelectedItemPosition() == 2){
+            genderid = 'F';
+        }else{
+            genderid = '?';
         }
 
         if(!firstname.isEmpty() && !lastname.isEmpty() && !pass.isEmpty()) {
@@ -105,5 +118,29 @@ public class UpdateActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, getString(R.string.noemptyfields), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.etBirth:
+                showDatePickerDialog();
+                break;
+        }
+    }
+
+    private void showDatePickerDialog() {
+        DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                final String selectedDate = twoDigits(day) + "/" + twoDigits(month+1) + "/" + year;
+                birth.setText(selectedDate);
+            }
+        });
+
+        newFragment.show(getSupportFragmentManager(), "datePicker");
+    }
+
+    private String twoDigits(int n) {
+        return (n<=9) ? ("0"+n) : String.valueOf(n);
     }
 }

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <string name="app_name">Pets</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
@@ -31,11 +31,31 @@
     <string name="update">Update</string>
     <string name="userlist">User list</string>
     <string name="birth">Birth date</string>
-    <string name="hint_birth">Write your birth date</string>
+    <string name="hint_birth">Select your birth date</string>
     <string name="phone">Phone</string>
     <string name="hint_phone">Write your phone number</string>
     <string name="gender">Gender</string>
     <string name="country">Country</string>
     <string name="toastupdated">The user has been updated successfully</string>
     <string name="toastdeleted">The user has been deleted successfully</string>
+    <string name="createdByTitle">Created by:</string>
+    <string name="author">Iván Camilo Narváez Vanegas</string>
+    <string name="ageTitle">21 years old</string>
+    <string name="careerTitle">Systems engineering</string>
+    <string name="emailOfAuthor">ivannarvaez774@hotmail.com</string>
+
+    <string-array name="countries_array">
+        <item android:id="@+id/iteColombia">Colombia</item>
+        <item android:id="@+id/iteUSA">United States</item>
+        <item android:id="@+id/iteRussia">Russia</item>
+        <item android:id="@+id/iteBrazil">Brazil</item>
+        <item android:id="@+id/iteJapan">Japan</item>
+    </string-array>
+
+    <string-array name="genders_array">
+        <item android:id="@+id/iteMale">Male</item>
+        <item android:id="@+id/iteFemale">Female</item>
+    </string-array>
+    <string name="hint_country">Select your country</string>
+    <string name="hint_gender">Select your gender</string>
 </resources>
