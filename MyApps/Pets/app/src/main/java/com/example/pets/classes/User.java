@@ -17,6 +17,17 @@ public class User {
         this.gender = gender;
     }
 
+    public User(String firstname, String lastname, String email, String password, String birth, int country, String phone, char gender) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.password = password;
+        this.birth = birth;
+        this.country = country;
+        this.phone = phone;
+        this.gender = gender;
+    }
+
     public User(String firstname, String lastname, String email, String password) {
         this.firstname = firstname;
         this.lastname = lastname;

@@ -29,4 +29,14 @@
     <string name="logout">Cerrar sesión</string>
     <string name="maleusers">Lista de usuarios</string>
     <string name="updateuser">Modificar usuario</string>
+    <string name="update">Actualizar</string>
+    <string name="userlist">Lista de usuarios</string>
+    <string name="birth">Fecha de nacimiento</string>
+    <string name="hint_birth">Escriba su fecha de nacimiento</string>
+    <string name="phone">Teléfono</string>
+    <string name="hint_phone">Escriba su número de teléfono</string>
+    <string name="gender">Género</string>
+    <string name="country">País</string>
+    <string name="toastupdated">El usuario ha sido actualizado exitosamente</string>
+    <string name="toastdeleted">El usuario ha sido eliminado exitosamente</string>
 </resources>

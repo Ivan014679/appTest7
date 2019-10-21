@@ -3,6 +3,9 @@ package com.example.pets.classes;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -12,15 +15,20 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.pets.MainMenuActivity;
 import com.example.pets.R;
+import com.example.pets.UpdateActivity;
+import com.example.pets.database.PetsDB;
 
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
     private List<User> userList;
+    private Context mContext;
 
-    public UserAdapter(List<User> userList) {
+    public UserAdapter(List<User> userList, Context mContext) {
         this.userList = userList;
+        this.mContext = mContext;
     }
 
     @NonNull
@@ -32,7 +40,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder userViewHolder, int i) {
-        userViewHolder.id = userList.get(i).getId();
         userViewHolder.tvFirstname.setText(userList.get(i).getFirstname());
         userViewHolder.tvLastname.setText(userList.get(i).getLastname());
         userViewHolder.tvEmail.setText(userList.get(i).getEmail());
@@ -46,7 +53,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     class UserViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener{
 
         TextView tvFirstname, tvLastname, tvEmail;
-        int id;
 
         UserViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -67,9 +73,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                 public boolean onMenuItemClick(MenuItem item) {
                     switch (item.getItemId()){
                         case R.id.iteUpdateUser: //Update user
-                            System.out.println("Update user huashuashuas");
+                            Intent intent = new Intent(mContext, UpdateActivity.class);
+                            intent.putExtra("email", tvEmail.getText());
+                            mContext.startActivity(intent);
                         case R.id.iteDeleteUser: //Delete user
-                            System.out.println("Delete user juejuejue");
+                            PetsDB petsDB = new PetsDB(mContext,
+                                    "pets", null, 1);
+                            petsDB.delete(tvEmail.getText().toString());
+                            Toast.makeText(mContext, Resources.getSystem().getString(R.string.toastdeleted), Toast.LENGTH_SHORT).show();
+                            mContext.startActivity(new Intent(mContext, MainMenuActivity.class));
                         default:
                             return true;
                     }

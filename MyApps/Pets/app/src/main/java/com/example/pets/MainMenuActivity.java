@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.pets.classes.User;
 import com.example.pets.classes.UserAdapter;
@@ -35,7 +34,7 @@ public class MainMenuActivity extends AppCompatActivity {
         lManager = new LinearLayoutManager(this);
         rvUsers.setLayoutManager(lManager);
 
-        adapter = new UserAdapter(userList);
+        adapter = new UserAdapter(userList, this);
         rvUsers.setAdapter(adapter);
     }
 }

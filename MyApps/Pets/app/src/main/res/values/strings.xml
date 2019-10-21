@@ -28,4 +28,14 @@
     <string name="logout">Logout</string>
     <string name="updateuser">Update user</string>
     <string name="deleteuser">Delete user</string>
+    <string name="update">Update</string>
+    <string name="userlist">User list</string>
+    <string name="birth">Birth date</string>
+    <string name="hint_birth">Write your birth date</string>
+    <string name="phone">Phone</string>
+    <string name="hint_phone">Write your phone number</string>
+    <string name="gender">Gender</string>
+    <string name="country">Country</string>
+    <string name="toastupdated">The user has been updated successfully</string>
+    <string name="toastdeleted">The user has been deleted successfully</string>
 </resources>
