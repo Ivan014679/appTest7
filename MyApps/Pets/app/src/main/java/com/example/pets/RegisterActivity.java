@@ -9,14 +9,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.pets.classes.User;
 import com.example.pets.database.PetsDB;
 
 import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText fname, lname, email, password, cpassword;
-    private String regex_pass = "((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]).{5,})";
-    private String regex_names = "^[\\p{L} .'-]+$";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
         String cpass = cpassword.getText().toString();
 
         if(!firstname.isEmpty() && !lastname.isEmpty() && !onlinemail.isEmpty() && !pass.isEmpty() && !cpass.isEmpty()) {
+            String regex_pass = "((?=.*[a-z])(?=.*\\d)(?=.*[A-Z])(?=.*[@#$%!]).{5,})";
+            String regex_names = "^[\\p{L} .'-]+$";
             if(!Patterns.EMAIL_ADDRESS.matcher(onlinemail.trim()).matches()) {
                 Toast.makeText(this, getString(R.string.incorrectemail), Toast.LENGTH_SHORT).show();
             }else if(!Pattern.compile(regex_names).matcher(firstname).matches() || !Pattern.compile(regex_names).matcher(lastname).matches()){
@@ -48,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
             }else if(!pass.contentEquals(cpass)){
                 Toast.makeText(this, getString(R.string.toastpassconfirm), Toast.LENGTH_SHORT).show();
             }else{
-                String[] user = {firstname, lastname, onlinemail, pass};
+                User user = new User(firstname, lastname, onlinemail, pass);
                 PetsDB petsDB = new PetsDB(this,
                         "pets", null, 1);
                 if (petsDB.insert(user)) {

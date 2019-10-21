@@ -21,4 +21,11 @@
     <string name="toastpassconfirm">The passwords aren\'t the same</string>
     <string name="wrongpassword">The password must be longer than 5 characters and have uppercase, lowercase, numbers and symbols</string>
     <string name="wrongnames">First name and last name only must contain letters</string>
+    <string name="maleusers">List male users</string>
+    <string name="femaleusers">List female users</string>
+    <string name="allusers">List all users</string>
+    <string name="about_of">About of</string>
+    <string name="logout">Logout</string>
+    <string name="updateuser">Update user</string>
+    <string name="deleteuser">Delete user</string>
 </resources>

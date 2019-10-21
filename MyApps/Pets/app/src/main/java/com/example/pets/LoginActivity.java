@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.pets.classes.User;
 import com.example.pets.database.PetsDB;
 
 public class LoginActivity extends AppCompatActivity {
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(!onlinemail.isEmpty() && !pass.isEmpty()) {
             if(Patterns.EMAIL_ADDRESS.matcher(onlinemail.trim()).matches()){
-                String[] user = {onlinemail, pass};
+                User user = new User(onlinemail, pass);
                 PetsDB petsDB = new PetsDB(this,
                         "pets", null, 1);
                 if (petsDB.login(user)) {

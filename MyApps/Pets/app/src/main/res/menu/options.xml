@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/iteMaleUsers"
+        android:title="@string/maleusers"
+        />
+
+    <item
+        android:id="@+id/iteFemaleUsers"
+        android:title="@string/femaleusers"
+        />
+
+    <item
+        android:id="@+id/iteAllUsers"
+        android:title="@string/allusers"
+        />
+
+    <item
+        android:id="@+id/iteAboutOf"
+        android:title="@string/about_of"
+        />
+
+    <item
+        android:id="@+id/iteLogout"
+        android:title="@string/logout"
+        />
 </menu>

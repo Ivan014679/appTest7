@@ -22,4 +22,11 @@
     <string name="toastpassconfirm">Las contraseñas tienen que ser iguales</string>
     <string name="wrongpassword">La contraseña debe ser mayor a 5 caracteres y tener mayúsculas, minúsculas, números y símbolos</string>
     <string name="wrongnames">El nombre y el apellido sólo deben contener letras</string>
+    <string name="about_of">Acerca de</string>
+    <string name="allusers">Lista de todos los usuarios</string>
+    <string name="deleteuser">Eliminar usuario</string>
+    <string name="femaleusers">Lista de usuarias</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="maleusers">Lista de usuarios</string>
+    <string name="updateuser">Modificar usuario</string>
 </resources>
