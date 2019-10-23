@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.pets"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="15"
+8-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:5:5-35:19
+12        android:allowBackup="true"
+12-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.1.0] C:\Users\Ivan\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:7:9-43
+16        android:label="@string/app_name"
+16-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:9:9-54
+18        android:supportsRtl="true"
+18-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:10:9-35
+19        android:testOnly="true" >
+20        <activity
+20-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:11:9-94
+21            android:name="com.example.pets.AboutOfActivity"
+21-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:11:19-50
+22            android:theme="@style/AppTheme" />
+22-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:11:51-82
+23        <activity
+23-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:12:9-15:47
+24            android:name="com.example.pets.UpdateActivity"
+24-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:13:13-43
+25            android:label="@string/updateuser"
+25-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:14:13-47
+26            android:theme="@style/AppTheme" />
+26-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:15:13-44
+27        <activity
+27-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:16:9-19:47
+28            android:name="com.example.pets.MainMenuActivity"
+28-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:17:13-45
+29            android:label="@string/userlist"
+29-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:18:13-45
+30            android:theme="@style/AppTheme" />
+30-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:19:13-44
+31        <activity
+31-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:20:9-22:58
+32            android:name="com.example.pets.RegisterActivity"
+32-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:21:13-45
+33            android:theme="@style/AppThemeNoActionBar" />
+33-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:22:13-55
+34        <activity
+34-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:23:9-31:20
+35            android:name="com.example.pets.LoginActivity"
+35-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:24:13-42
+36            android:theme="@style/AppThemeNoActionBar" >
+36-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:25:13-55
+37            <intent-filter>
+37-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:26:13-30:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:27:17-69
+38-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:27:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:29:17-77
+40-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:29:27-74
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:32:9-34:58
+44            android:name="com.example.pets.MainActivity"
+44-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:33:13-41
+45            android:theme="@style/AppThemeNoActionBar" />
+45-->C:\Users\Ivan\AndroidStudioProjects\appTest8\MyApps\Pets\app\src\main\AndroidManifest.xml:34:13-55
+46    </application>
+47
+48</manifest>

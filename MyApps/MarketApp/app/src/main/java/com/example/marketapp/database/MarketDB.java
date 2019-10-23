@@ -54,8 +54,8 @@ public class MarketDB extends SQLiteOpenHelper {
 
         //Store all users into a user list
         while (cursor.moveToNext()) {
-            productList.add(new Product(cursor.getString(0), cursor.getString(1),
-                    Integer.parseInt(cursor.getString(2))));
+            productList.add(new Product(cursor.getString(1), cursor.getString(2),
+                    Integer.parseInt(cursor.getString(3))));
         }
 
         cursor.close();

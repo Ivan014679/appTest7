@@ -7,13 +7,14 @@
     card_view:cardUseCompatPadding="true">
 
     <RelativeLayout
+        android:id="@+id/layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/usericon"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="12dp"
             android:orientation="vertical">
@@ -56,6 +57,17 @@
 
             </LinearLayout>
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/carticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/data"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ic_add_shopping_cart"
+            android:padding="32dp"
+            android:scaleType="centerCrop" />
 
         <View
             android:layout_width="wrap_content"

@@ -1,6 +1,8 @@
 package com.example.marketapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +11,18 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.marketapp.classes.Product;
+import com.example.marketapp.classes.ProductAdapter;
 import com.example.marketapp.database.MarketDB;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private EditText name, category, quantity;
+    List<Product> productList;
+
+    private RecyclerView rvProducts;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager lManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +32,19 @@ public class MainActivity extends AppCompatActivity {
         name = findViewById(R.id.editTextProduct);
         category = findViewById(R.id.editTextCategory);
         quantity = findViewById(R.id.editTextQuantity);
+        rvProducts = findViewById(R.id.rvProducts);
+
+        MarketDB marketDB = new MarketDB(this,"market", null, 1);
+        productList = marketDB.select();
+
+        rvProducts.setHasFixedSize(true);
+
+        lManager = new LinearLayoutManager(this);
+        rvProducts.setLayoutManager(lManager);
+
+        adapter = new ProductAdapter(productList, this);
+
+        rvProducts.setAdapter(adapter);
     }
 
     public void add(View view){
@@ -32,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         Product product = new Product(productname, productcat, amount);
         MarketDB marketDB = new MarketDB(this,
-                "pets", null, 1);
+                "market", null, 1);
 
         if (marketDB.insert(product)) {
             Toast.makeText(this, "The product has been registered", Toast.LENGTH_SHORT).show();

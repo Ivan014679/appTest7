@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.marketapp.R;
 import com.example.marketapp.database.MarketDB;
@@ -62,7 +63,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         @Override
         public void onClick(View view) {
-
+            Toast.makeText(mContext, "Quantity: " + amount, Toast.LENGTH_SHORT).show();
         }
     }
 }
