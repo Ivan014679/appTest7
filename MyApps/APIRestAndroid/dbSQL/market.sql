@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-10-2019 a las 15:36:34
+-- Tiempo de generación: 13-11-2019 a las 14:44:10
 -- Versión del servidor: 10.4.8-MariaDB
--- Versión de PHP: 7.3.10
+-- Versión de PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,16 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `email` varchar(150) COLLATE utf8_bin NOT NULL
+  `firstname` varchar(100) COLLATE utf8_bin NOT NULL,
+  `lastname` varchar(100) COLLATE utf8_bin NOT NULL,
+  `email` varchar(150) COLLATE utf8_bin NOT NULL,
+  `phone` varchar(20) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `email`) VALUES
-(1, ''),
-(2, '');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `phone`) VALUES
+(7, 'Sisie', 'Califralistica', 'susi@cali.com', '2341313423');
 
 --
 -- Índices para tablas volcadas
@@ -59,7 +61,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
